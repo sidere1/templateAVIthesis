@@ -31,19 +31,22 @@
     % Adds \minitoc and \newpage after calling \chapter{}
     \newcommand{\chapteropts}[1]{\chapter{#1} \minitoc \newpage}
 
-    % \input{content_example}
-    \input{content}
-
+    % for compatibility purposes : comment the following lines and replace them by your personal files
+    \input{content_example}
+    \clearpage 
     \appendix 
-    % \input{content_appendix_example}
-    \input{content_appendix}
-
-
-    % Bibliography
-    % \chapter{Bibliography} % si on définit un chapitre ça affiche deux fois "Bibliography"... 
+    \input{content_appendix_example}
     \clearpage 
     \bibliographystyle{plain}
-    % \bibliography{refs/refs_example.bib}
-    \bibliography{refs/refs.bib}
+    \bibliography{refs/refs_example.bib}
+    
+    % \input{content}
+    % \clearpage 
+    % \appendix 
+    % \input{content_appendix}
+    % \clearpage 
+    % \bibliographystyle{plain}
+    % \bibliography{refs/refs.bib}
+
 
 \end{document}

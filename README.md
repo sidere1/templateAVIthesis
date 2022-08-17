@@ -4,7 +4,7 @@ TEMPLATE LATEX THESE
 * Ceci est un template 
 * Il est en LaTex
 * Ça te permet d'écrire ta thèse 
-* Comme ça, si tu veux écrire ta thèse, ben tu prends ce template et voilà 
+* Comme ça, t'écris des trucs en LaTex avec ce template et pouf t'as une thèse. 
 
 
 
@@ -12,7 +12,7 @@ Utilisation
 -----------
 
 * copier-coller le fichier "content_example" en "content" pour linker les bons fichiers. Dans le main, (dé) commenter les lignes correspondantes. 
-* idem pour la biblio 
+* idem pour la biblio et les annexes 
 * Si vous avez des idées d'amélioration, surtout n'hésitez pas à en faire profiter tout le monde ! (si vous ne maîtrisez pas git, envoyez vos suggestions à quelqu'un qui saura le mettre à jour)
 
 
@@ -24,7 +24,7 @@ Tips généraux
 * Pour trouver un symbole LaTex : http://detexify.kirelabs.org/classify.html
 
 * de la doc 
-    * bonne pratiques : https://www.lrde.epita.fr/~didier/research/publications/papers/verna.11.tug.pdf 
+    * bonnes pratiques : https://www.lrde.epita.fr/~didier/research/publications/papers/verna.11.tug.pdf 
     * pgfplot : https://ctan.gutenberg.eu.org/graphics/pgf/contrib/pgfplots/doc/pgfplots.pdf
     * tikz : https://tikz.dev/
 
