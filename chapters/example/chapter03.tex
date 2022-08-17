@@ -30,34 +30,37 @@
         \end{figure}
 
 
-        \begin{figure}[ht!]
-            \centering
-            \begin{tikzpicture} [spy using outlines={circle, magnification=3, size=2cm, connect spies}]
-                \begin{axis}
-                    [
-                        xlabel={un axe quelconque},
-                        ylabel={un truc tout aussi quelconque},
-                        xmin=100, xmax=3500,
-                        ymin=35, ymax=75,
-                        legend pos= north east,
-                        ymajorgrids=true,
-                        xmajorgrids=true,
-                        grid style=dashed, 
-                        no markers,
-                        every axis plot/.append style={ultra thick},
-                        width=0.8\textwidth
-                    ] 
-                    \addplot+ [style=dotted, color=black] table {curves/example/curve1};
-                    \addlegendentry{Courbe};
-                \end{axis}
-            \end{tikzpicture}
-            \caption{Pgfplot rules. End of discussion.}
-            \label{fig:pgfplotExample}
-        \end{figure}
+        \ifx\usepgf\true 
 
+            \begin{figure}[ht!]
+                \centering
+                \begin{tikzpicture} [spy using outlines={circle, magnification=3, size=2cm, connect spies}]
+                    \begin{axis}
+                        [
+                            xlabel={un axe quelconque},
+                            ylabel={un truc tout aussi quelconque},
+                            xmin=100, xmax=3500,
+                            ymin=35, ymax=75,
+                            legend pos= north east,
+                            ymajorgrids=true,
+                            xmajorgrids=true,
+                            grid style=dashed, 
+                            no markers,
+                            every axis plot/.append style={ultra thick},
+                            width=0.8\textwidth
+                        ] 
+                        \addplot+ [style=dotted, color=black] table {curves/example/curve1};
+                        \addlegendentry{Courbe};
+                    \end{axis}
+                \end{tikzpicture}
+                \caption{Pgfplot rules. End of discussion.}
+                \label{fig:pgfplotExample}
+            \end{figure}
+        \fi 
+        
         This curves shows results and has been obtained with the \gls{fem}. 
 
-
+        
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

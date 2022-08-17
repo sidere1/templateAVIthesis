@@ -1,5 +1,9 @@
 % This file contains the packages used in this document
 
+\def\true{true}
+% if you wish to use pgfplot, set this next one to tru  
+\def\usepgf{false}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -25,13 +29,18 @@
 % Tikz
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric}
-\usetikzlibrary{spy}
-\usepackage{pgfplots} 
-\pgfplotsset{width=10cm,compat=1.9} 
-\usepgfplotslibrary{external} % pour exporter séparément les figures et les importer après dans le doc. Compilation plus rapide
-\tikzexternalize[prefix=tikz/]
-\synctex=1 
-\usetikzlibrary{calc}
+
+\ifx\usepgf\true 
+  \usepackage{pgfplots} 
+  \pgfplotsset{width=10cm,compat=1.9} 
+  \usepgfplotslibrary{external} % pour exporter séparément les figures et les importer après dans le doc. Compilation plus rapide
+  \tikzexternalize[prefix=tikz/]
+  \synctex=1 
+  \usetikzlibrary{calc}
+\fi 
+
+
+
 
 
 % Change the style of the chapters title pages
