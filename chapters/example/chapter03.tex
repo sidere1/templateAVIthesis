@@ -1,0 +1,66 @@
+\chapteropts{Another one bites the dust}
+
+    \section{Section Title}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        \begin{figure}
+            \centering
+            \begin{subfigure}[b]{0.3\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{graph1}
+                \caption{$y=x$}
+                \label{fig:y equals x}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}[b]{0.3\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{graph2}
+                \caption{$y=3sinx$}
+                \label{fig:three sin x}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}[b]{0.3\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{graph3}
+                \caption{$y=5/x$}
+                \label{fig:five over x}
+            \end{subfigure}
+            \caption{Three simple graphs}
+            \label{fig:three graphs}
+        \end{figure}
+
+
+        \begin{figure}[ht!]
+            \centering
+            \begin{tikzpicture} [spy using outlines={circle, magnification=3, size=2cm, connect spies}]
+                \begin{axis}
+                    [
+                        xlabel={un axe quelconque},
+                        ylabel={un truc tout aussi quelconque},
+                        xmin=100, xmax=3500,
+                        ymin=35, ymax=75,
+                        legend pos= north east,
+                        ymajorgrids=true,
+                        xmajorgrids=true,
+                        grid style=dashed, 
+                        no markers,
+                        every axis plot/.append style={ultra thick},
+                        width=0.8\textwidth
+                    ] 
+                    \addplot+ [style=dotted, color=black] table {curves/example/curve1};
+                    \addlegendentry{Courbe};
+                \end{axis}
+            \end{tikzpicture}
+            \caption{Pgfplots rules. End of discussion.}
+            \label{fig:pgfplotsExample}
+        \end{figure}
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        see \ref{fig:five over x}
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        \subsection{SubSection Title}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

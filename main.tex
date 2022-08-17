@@ -1,0 +1,49 @@
+\documentclass[12pt,twoside]{report}
+
+\input{parameters/packages} % Put all the packages (with options) needed in this tex file
+\input{parameters/commands} % Gather your commands here
+\input{parameters/acronyms}
+
+\graphicspath{ {figures/}  {figures/title_page/} } % Add several paths to find pictures
+
+% -------------------------------------------------------------------------
+\begin{document}
+
+    % All infos before table of contents
+    \include{beginning/titlepage}        % Title page
+    \include{beginning/abstract}         % Abstract
+    \include{beginning/dedication}       % Dedication
+    \include{beginning/declarations}     % Declarations
+    \include{beginning/acknowledgements} % Acknowledgements
+
+    % Tables
+    \dominitoc
+    \clearpage
+    \tableofcontents
+    \clearpage 
+    \listoffigures
+    \clearpage 
+    \listoftables
+    \clearpage 
+    \printnoidxglossary % you may comment this if you do not use \gls{entry} for all your acronyms  
+    \clearpage 
+
+    % Adds \minitoc and \newpage after calling \chapter{}
+    \newcommand{\chapteropts}[1]{\chapter{#1} \minitoc \newpage}
+
+    % \input{content_example}
+    \input{content}
+
+    \appendix 
+    % \input{content_appendix_example}
+    \input{content_appendix}
+
+
+    % Bibliography
+    % \chapter{Bibliography} % si on définit un chapitre ça affiche deux fois "Bibliography"... 
+    \clearpage 
+    \bibliographystyle{plain}
+    % \bibliography{refs/refs_example.bib}
+    \bibliography{refs/refs.bib}
+
+\end{document}

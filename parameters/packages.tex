@@ -1,0 +1,70 @@
+% This file contains the packages used in this document
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+
+% Some classics
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{mathdots}
+\usepackage{bm}
+\usepackage{enumitem}
+
+
+% Tikz
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{spy}
+\usepackage{pgfplots} 
+\pgfplotsset{width=10cm,compat=1.9} 
+\usepgfplotslibrary{external} % pour exporter séparément les figures et les importer après dans le doc. Compilation plus rapide
+\tikzexternalize[prefix=tikz/]
+\synctex=1 
+\usetikzlibrary{calc}
+
+
+% Change the style of the chapters title pages
+\usepackage[Sonny]{fncychap}
+
+% Table of contents at beginning of chapters
+\usepackage{minitoc}
+
+% Facyhdr : defines head and foot of pages
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+  \renewcommand{\sectionmark}[1]{\markright{#1}{}}
+  \fancyhead{}
+  \fancyhead[LE]{Chapter \thechapter \hspace{.1em} - \leftmark}
+  \fancyhead[RE]{\thepage}
+  \fancyhead[RO]{\thesection \hspace{.1em} - \rightmark}
+  \fancyhead[LO]{\thepage}
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+
+% Bibliography
+% \usepackage[numbers,sectionbib]{natbib}
+% \usepackage{chapterbib} % To layout bibliography of each chapter
+
+
+% Glossary 
+\usepackage[xindy]{glossaries}
+	\let\oldnewacronym\newacronym
+	\newcommand*{\provideacronym}[3]{%
+	  \ifglsentryexists{#1}{%
+	  }{%
+	    \oldnewacronym{#1}{#2}{#3}%
+	  }%
+	}
+  \makenoidxglossaries

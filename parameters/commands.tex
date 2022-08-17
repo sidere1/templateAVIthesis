@@ -1,0 +1,147 @@
+% Real and Imaginary
+\newcommand{\Rbb}{\mathbb{R}}
+\newcommand{\Cbb}{\mathbb{C}}
+\newcommand{\e}{e}
+\newcommand{\ci}{i}
+
+
+% Transpose
+\renewcommand{\t}{\mathrm{T}}
+\newcommand{\h}{\mathrm{H}}
+
+% Others
+\newcommand{\irm}{\mathrm{i} \,}
+\newcommand{\jrm}{\mathrm{j} \,}
+
+% Matrices shortcuts
+\newcommand{\arr}[2]{\begin{array}{#1} #2 \end{array}}
+\newcommand{\cro}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\aco}[1]{\begin{Bmatrix} #1 \end{Bmatrix}}
+\newcommand{\bra}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\sys}[1]{\begin{array}{rcl} #1 \end{array}}
+\newcommand{\sysbra}[1]{\left \{ \begin{array}{rcl} #1 \end{array} \right.}
+
+% 1st and 2nd
+\newcommand{\st}{\textsuperscript{st} }
+\newcommand{\nd}{\textsuperscript{nd} }
+
+% FE matrices
+\newcommand{\q}{\mathbf{q}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\D}{\mathbf{D}}
+\newcommand{\K}{\mathbf{K}}
+\newcommand{\F}{\mathbf{F}}
+\newcommand{\B}{\mathbf{B}}
+\newcommand{\C}{\mathbf{C}}
+\renewcommand{\H}{\mathbf{H}}
+
+% N (in the GHM method)
+\newcommand{\Ncal}{\mathbf{\mathcal{N}}}
+
+% GHM matrices
+\renewcommand{\v}{\mathbf{v}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\Mt}{\mathbf{\tilde{M}}}
+\newcommand{\Dt}{\mathbf{\tilde{D}}}
+\newcommand{\Kt}{\mathbf{\tilde{K}}}
+\newcommand{\Ft}{\mathbf{\tilde{F}}}
+\newcommand{\Bt}{\mathbf{\tilde{B}}}
+\newcommand{\Ct}{\mathbf{\tilde{C}}}
+
+% State-space
+\renewcommand{\u}{\mathbf{u}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\A}{\mathbf{A}}
+\newcommand{\G}{\mathbf{G}}
+\renewcommand{\L}{\mathbf{L}}
+
+% G (shear modulus)
+\newcommand{\Grm}{\mathrm{G}}
+
+% Snapshots
+\newcommand{\R}{\mathbf{R}}
+\renewcommand{\S}{\mathbf{S}}
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\Omegabf}{\mathbf{\Omega}}
+\newcommand{\I}{\mathbf{I}}
+
+% Correlation matrix
+\newcommand{\Z}{\mathbf{Z}}
+
+% Gramians
+\renewcommand{\P}{\mathbf{P}}
+\newcommand{\Q}{\mathbf{Q}}
+
+% SVD
+\newcommand{\U}{\mathbf{U}}
+\newcommand{\Sigmabf}{\mathbf{\Sigma}}
+\newcommand{\V}{\mathbf{V}}
+
+% Balanced realization
+\newcommand{\T}{\mathbf{T}}
+\newcommand{\Phibf}{\mathbf{\Phi}}
+\newcommand{\Psibf}{\mathbf{\Psi}}
+
+% Eigendecomposition
+\newcommand{\mubf}{\mathbf{a}}
+\newcommand{\Lambdabf}{\mathbf{\Lambda}}
+\newcommand{\W}{\mathbf{W}}
+
+% Colors used in graphs
+\definecolor{gnu_black}{RGB}{0,0,0}
+\definecolor{gnu_blue}{RGB}{0,114,189}
+\definecolor{gnu_orange}{RGB}{217,83,25}
+\definecolor{gnu_violet}{RGB}{126,47,142}
+\definecolor{gnu_green}{RGB}{119,172,48}
+\definecolor{gnu_purple}{RGB}{162,20,47}
+\definecolor{gnu_gold}{RGB}{237,177,32}
+
+% Legend in caption
+\newcommand{\LSblackline}{
+\begin{tikzpicture}[scale=0.2]
+    \protect\filldraw[white] (-2.5,-0.5) -- (2.5,-0.5) -- (2.5,0.5) -- (-2.5,0.5);
+    \protect\draw[gnu_black, thick] (-2.5,0) -- (2.5,0);
+    % \protect\filldraw[gnu_blue] (-0.5,-0.3) -- (0.5,-0.3) -- (0,0.55);
+\end{tikzpicture}
+}
+
+\newcommand{\LStriangle}{
+\begin{tikzpicture}[scale=0.2]
+    \protect\filldraw[white] (-2.5,-0.5) -- (2.5,-0.5) -- (2.5,0.5) -- (-2.5,0.5);
+    \protect\draw[gnu_blue, thick] (-2.5,0) -- (2.5,0);
+    \protect\filldraw[gnu_blue] (-0.5,-0.3) -- (0.5,-0.3) -- (0,0.55);
+\end{tikzpicture}
+}
+
+\newcommand{\LSstar}{
+\begin{tikzpicture}[scale=0.2]
+    \protect\filldraw[white] (-2.5,-0.5) -- (2.5,-0.5) -- (2.5,0.5) -- (-2.5,0.5);
+    \protect\draw[gnu_orange, thick, dashed] (-2.5,0) -- (2.5,0);
+    % Plus
+    \protect\draw[gnu_orange, thick] (-0.5,0) -- (0.5,0);
+    \protect\draw[gnu_orange, thick] (0,-0.5) -- (0,0.5);
+    % Cross
+    \protect\draw[gnu_orange, thick] (-0.5,-0.5) -- (0.5,0.5);
+    \protect\draw[gnu_orange, thick] (-0.5,0.5) -- (0.5,-0.5);
+\end{tikzpicture}
+}
+
+\newcommand{\LSplus}{
+\begin{tikzpicture}[scale=0.2]
+    \protect\filldraw[white] (-2.5,-0.5) -- (2.5,-0.5) -- (2.5,0.5) -- (-2.5,0.5);
+    \protect\draw[gnu_violet, thick, dotted] (-2.5,0) -- (2.5,0);
+    % Plus
+    \protect\draw[gnu_violet, thick] (-0.5,0) -- (0.5,0);
+    \protect\draw[gnu_violet, thick] (0,-0.5) -- (0,0.5);
+\end{tikzpicture}
+}
+
+\newcommand{\LSrectangle}{
+\begin{tikzpicture}[scale=0.2]
+    \protect\filldraw[white] (-2.5,-0.5) -- (2.5,-0.5) -- (2.5,0.5) -- (-2.5,0.5);
+    \protect\draw[gnu_green, thick, dashdotted] (-2.5,0) -- (2.5,0);
+    \protect\filldraw[gnu_green] (-0.5,-0.5) -- (0.5,-0.5) -- (0.5,0.5) -- (-0.5,0.5);
+\end{tikzpicture}
+}

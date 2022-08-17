@@ -1,0 +1,16 @@
+#Prerequisites 
+*.toc 
+*.pdf 
+*.aux
+*.spl 
+*.xdy
+*.fls
+*.fdb_latexmk 
+*.blg
+*.bbl
+*.auxlock 
+*.out
+*.synctex.gz
+*.log
+tikz/
+.*

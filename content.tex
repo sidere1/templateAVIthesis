@@ -1,0 +1,77 @@
+%!TEX root = ../main.tex
+
+\input{parameters/myCommands.tex}
+\chapter{Intro - contexte - état de l'art}
+    % \include{chapters/soa/introduction/introduction}
+    \include{chapters/soa/etat_de_lart/etat_de_lart}
+    % \include{chapters/soa/problematique/problematique}
+    % \include{chapters/soa/approche/approche}
+    % \include{chapters/soa/conclusion/conclusion-francaise}
+
+
+
+\chapter{Chaînages dans des domaines fixes}
+    \label{section:chapDiaphragme}
+     \input{chapters/singleDiaphragm/intro.tex}
+    \section{Théorie - description de la méthode utilisée}
+        \input{chapters/singleDiaphragm/tout}
+    \section{Application : simple diaphragme}
+        \input{chapters/singleDiaphragm/aero}
+    \section{Comparaison de formulations}
+        \input{chapters/singleDiaphragm/comparaisonDesFormulations}
+    %%%%%% \section{Étude du mapping}
+    %%%%%%     \input{chapters/singleDiaphragm/mapping}
+    \section{Conclusions}
+        \input{chapters/singleDiaphragm/conclusion}
+
+\chapter{Chaînages avec formulations poreuses}
+    \label{section:chapPoreux}
+    \input{chapters/dAcd/intro.tex}
+    \section{Théorie, formulations faibles}
+        % %%%%%%%%%%\subsection{Formulation poreuse}
+            \input{chapters/dAcd/theorieIntro}
+        \subsection{Formulation poreuse 1}
+            \input{chapters/dAcd/poreuxCaro}
+        \subsection{Formulation poreuse 2}
+            \input{chapters/dAcd/poreuxSourcetronquee}
+    \section{Application : profil aérodynamique en conduit}
+        \subsection{Description du système}
+            \input{chapters/dAcd/dacdDef}
+        \subsection{Résultats aérodynamiques}
+            \input{chapters/dAcd/aero}
+            \clearpage 
+        \subsection{Résultats acoustiques}
+            \input{chapters/dAcd/acoustique}
+    \section{Conclusions}
+        \input{chapters/dAcd/conclusion}
+
+
+
+\chapter{Résolution acoustique dans un domaine tournant 2D}
+    \label{section:chap2D}
+    \section{Article }
+    \section{Compléments à l'article}
+        \subsection{détails d'implémentation}
+        Projection, matrice des fonctions de base, matrices élémentaires 
+        \subsection{calcul d'erreur tc1 avec beaucoup de nLimit différents}
+        \subsection{méga système avec C > 2}
+        \subsection{solution analytique 1 qui marche mais pas de ouf }
+        \subsection{refaire la démo de Kaltenbacher 2016 pour établir l'équation d'onde ur psi en ALE}
+        \subsection{Système global}
+            % \input{chapters/2d/systemGlobal}
+        \subsection{Solution analytique avec la méthode d'Emmanuel}
+
+
+\chapter{Résolution acoustique dans un domaine tournant 3D}
+    \label{section:chap3D}
+    \section{Article }
+    \section{Compléments à l'article}
+        \subsection{comparaison temporel - fréquentiel cas NZE}
+        \subsection{Terme source PCWE}
+        \subsection{Brouillon}
+            \input{chapters/brouillon}
+
+
+
+
+    
