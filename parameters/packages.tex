@@ -44,8 +44,10 @@
 % Change the style of the chapters title pages
 \usepackage[Sonny]{fncychap}
 
-% Table of contents at beginning of chapters
-\usepackage{minitoc}
+\ifx\useminitoc\true 
+  % Table of contents at beginning of chapters
+  \usepackage{minitoc}
+\fi 
 
 % Facyhdr : defines head and foot of pages
 \usepackage{fancyhdr}
@@ -66,13 +68,16 @@
 % \usepackage{chapterbib} % To layout bibliography of each chapter
 
 
-% Glossary 
-\usepackage[xindy]{glossaries}
-	\let\oldnewacronym\newacronym
-	\newcommand*{\provideacronym}[3]{%
-	  \ifglsentryexists{#1}{%
-	  }{%
-	    \oldnewacronym{#1}{#2}{#3}%
-	  }%
-	}
-  \makenoidxglossaries
+\ifx\useglossary\true 
+
+  % Glossary 
+  \usepackage[xindy]{glossaries}
+    \let\oldnewacronym\newacronym
+    \newcommand*{\provideacronym}[3]{%
+      \ifglsentryexists{#1}{%
+      }{%
+        \oldnewacronym{#1}{#2}{#3}%
+      }%
+    }
+    \makenoidxglossaries
+\fi 

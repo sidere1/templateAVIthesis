@@ -1,7 +1,9 @@
 \documentclass[12pt,twoside]{report}
 
-% if you wish to use pgfplot, set this next one to true  
+% in the following lines, you may choose the packages you wish to load
 \def\usepgf{true}
+\def\useminitoc{false}
+\def\useglossary{true}
 
 \input{parameters/packages} % Put all the packages (with options) needed in this tex file
 \input{parameters/commands} % Gather your commands here
@@ -20,7 +22,9 @@
     \include{beginning/acknowledgements} % Acknowledgements
 
     % Tables
-    \dominitoc
+    \if\useminitoc\true 
+        \dominitoc
+    \fi 
     \clearpage
     \tableofcontents
     \clearpage 
@@ -28,11 +32,17 @@
     \clearpage 
     \listoftables
     \clearpage 
-    \printnoidxglossary % you may comment this if you do not use \gls{entry} for all your acronyms  
+    \ifx\useglossary\true 
+    \printnoidxglossary
+    \fi 
     \clearpage 
 
-    % Adds \minitoc and \newpage after calling \chapter{}
-    \newcommand{\chapteropts}[1]{\chapter{#1} \minitoc \newpage}
+    \ifx\useminitoc\truc 
+        % Adds \minitoc and \newpage after calling \chapter{}
+        \newcommand{\chapteropts}[1]{\chapter{#1} \minitoc \newpage}
+    \else 
+        \newcommand{\chapteropts}[1]{\chapter{#1}}
+    \fi 
 
     % for compatibility purposes : comment the following lines and replace them by your personal files
     \input{content_example}
