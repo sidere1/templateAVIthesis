@@ -19,7 +19,7 @@ Utilisation
 Tips généraux 
 --------------
 
-* Pour alléger un pdf un peu trop gros parce que t'as déconné sur les figures : gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=main_light.pdf main.pdf
+* Pour alléger un pdf un peu trop gros parce que t'as déconné sur les figures : gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=main_light.pdf main.pdf
 
 * Pour trouver un symbole LaTex : http://detexify.kirelabs.org/classify.html
 
