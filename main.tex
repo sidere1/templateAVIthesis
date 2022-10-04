@@ -47,7 +47,9 @@
     % for compatibility purposes : comment the following lines and replace them by your personal files
     \input{content_example}
     \clearpage 
-    \appendix 
+    \renewcommand{\theHchapter}{A\arabic{chapter}}
+    \renewcommand{\theHsection}{A\arabic{section}}
+	\appendix 
     \input{content_appendix_example}
     \clearpage 
     \bibliographystyle{plain}
@@ -55,7 +57,9 @@
     
     % \input{content}
     % \clearpage 
-    % \appendix 
+    % \renewcommand{\theHchapter}{A\arabic{chapter}}
+    % \renewcommand{\theHsection}{A\arabic{section}}
+	% \appendix 
     % \input{content_appendix}
     % \clearpage 
     % \bibliographystyle{plain}
